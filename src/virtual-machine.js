@@ -1077,6 +1077,15 @@ class VirtualMachine extends EventEmitter {
     }
 
     /**
+     * Set code for a target.
+     * @param {*} code - the code to set. 
+     */
+    setCode (code) {
+        this.editingTarget.setCode(code);
+        this.emitTargetsUpdate();
+    }
+
+    /**
      * Set the audio engine for the VM/runtime
      * @param {!AudioEngine} audioEngine The audio engine to attach
      */

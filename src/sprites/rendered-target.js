@@ -668,6 +668,38 @@ class RenderedTarget extends Target {
     }
 
     /**
+     * Set code
+     * @param {!string} code New code
+     */
+    setCode (code) {
+        this.sprite.code = code;
+    }
+
+    /**
+     * Get code
+     * @return {string} code
+     */
+    getCode () {
+        return this.sprite.code || '';
+    }
+
+    /**
+     * Set programming language
+     * @param {!string} lang New language
+     */
+    setLanguage (lang) {
+        this.sprite.language = lang;
+    }
+
+    /**
+     * Get programming language
+     * @return {string} language
+     */
+    getLanguage () {
+        return this.sprite.language || 'goplus.spx';
+    }
+
+    /**
      * Update all drawable properties for this rendered target.
      * Use when a batch has changed, e.g., when the drawable is first created.
      */
