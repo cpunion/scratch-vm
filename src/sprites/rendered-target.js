@@ -672,7 +672,7 @@ class RenderedTarget extends Target {
      * @param {!string} code New code
      */
     setCode (code) {
-        this.sprite.code = code;
+        this.code = code;
     }
 
     /**
@@ -680,7 +680,7 @@ class RenderedTarget extends Target {
      * @return {string} code
      */
     getCode () {
-        return this.sprite.code || '';
+        return this.code || '';
     }
 
     /**
@@ -1115,6 +1115,7 @@ class RenderedTarget extends Target {
             variables: this.variables,
             costumes: costumes,
             sounds: this.getSounds(),
+            code: this.code,
             textToSpeechLanguage: this.textToSpeechLanguage,
             tempo: this.tempo,
             volume: this.volume,
